@@ -13,7 +13,7 @@ class divide
                 else
                     throw b;
             } catch (...){
-                cout<<"\nDivision by zero(error)\n";
+                cout<<"Division by zero(error)\n";
             }
         }
 };
@@ -27,11 +27,11 @@ class neg
             cin>>a;
         try{
             if (a>=0)
-                cout<<"Age of the person is"<<a<<endl;
+                cout<<"Age of the person is "<<a<<endl;
             else
                 throw a;
         } catch (...){
-            cout<<"Please enter positive value for age"<<endl;
+            cout<<"Please enter positive value for age."<<endl;
         }
     }
 };
@@ -41,9 +41,9 @@ int main()
     divide d;
     neg n;
     while (1){
-        cout<<"Select the Operation"<<endl;
+        cout<<endl<<"Select the Operation"<<endl;
         cout<<"--------------------"<<endl;
-        cout <<"1. Divide integers\n2. Enter age\n3.Exit"<<endl;
+        cout <<"1.Divide integers\n2.Enter age\n3.Exit"<<endl;
         cin >> c;
         switch (c){
             case 1: d.compute(); break;
