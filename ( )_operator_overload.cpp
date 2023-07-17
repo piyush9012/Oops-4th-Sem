@@ -20,6 +20,7 @@ class add{
 			b = r+s;
 		}
 };
+
 int main()
 {
 	add b1;
