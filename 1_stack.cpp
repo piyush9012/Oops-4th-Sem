@@ -32,21 +32,18 @@ public:
         return 0;
     }
     void display() {
-        if (top == 0)
-        {
+        if (top == 0) {
             cout << "Stack is empty" << endl;
             return;
         }
         for (int i = 0; i < top; i++)
-        {
             cout << stack[i] << " ";
-        }
         cout << endl;
     }
 };
 
 int main() {
-    int ch, i;
+    int ch;
     stack s;
     s.init();
     while (1) {
