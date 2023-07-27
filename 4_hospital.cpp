@@ -49,10 +49,10 @@ public:
 };
 
 int main(){
-    Hospital h[5];
     int n;
     cout << "Enter the number of patients: ";
     cin >> n;
+    Hospital h[n];
     for (int i = 0; i < n; i++) {
         h[i].getdata();
     }
@@ -63,16 +63,16 @@ int main(){
         cout <<endl;
     }
 
-    PediatricPatient a1[5];
     cout << "\nEnter the number of pediatric patients: ";
     cin >> n;
+    PediatricPatient p[n];
     for (int i = 0; i < n; i++) {
-        a1[i].get();
+        p[i].get();
     }
     cout << "\nPediatric Patient database:\n";
     cout << "NAME \t AGE \t GENDER\tDIAGNOSIS\tVACCINE\n";
     for (int i = 0; i < n; i++) {
-        a1[i].put();
+        p[i].put();
     }
     return 0;
 }
