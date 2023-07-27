@@ -20,10 +20,10 @@ class list
             int num;
             cout<<"Enter the number"<<endl;   //Input number
             cin>>num;
-            node *p = new node;    // Newnode
-            p->data = num;
-            p->next = head;
-            head = p;
+            node *newnode = new node;    // Newnode
+            newnode->data = num;
+            newnode->next = head;
+            head = newnode;
         }
 
         void delet()
@@ -33,7 +33,7 @@ class list
                 cout<<"No elements to delete\n"<<endl;
             else
             {
-                cout <<"The deleted elements is: "<<f->data<<endl;
+                cout <<"The deleted elements is: "<<head->data<<endl;
                 head = head->next;
                 delete temp;
                 cout<<"Deletion successfull"<<endl;
