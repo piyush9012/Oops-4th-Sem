@@ -1,5 +1,4 @@
 #include <iostream>
-#include <new>
 using namespace std;
 
 struct nod
@@ -22,20 +21,18 @@ class list
             p->next = f;
             f = p;
         }
-
         void del(){
             node *temp = f;
             if (f == NULL)
                 cout<<"No elements to delete\n"<<endl;
             else{
-                cout <<"The deleted elements is: "<<f->info<<endl;
+                cout <<"The deleted elements is: "<<f->data<<endl;
                 f = f->next;
                 delete temp;
                 cout<<"Deletion successfull"<<endl;
             }
             return;
         }
-
         void disp(){
             node *temp = f;
             if (f == NULL)
