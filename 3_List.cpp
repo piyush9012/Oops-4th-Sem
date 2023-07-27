@@ -10,31 +10,31 @@ struct nod
 typedef struct nod node;
 class list
 {
-    node *f;
+    node *head;
     public:
         list(){
-            f = NULL;
+            head = NULL;
         }
         void insert()
         {
             int num;
-            cout<<"Enter the number"<<endl;
+            cout<<"Enter the number"<<endl;   //Input number
             cin>>num;
-            node *p = new node;
+            node *p = new node;    // Newnode
             p->data = num;
-            p->next = f;
-            f = p;
+            p->next = head;
+            head = p;
         }
 
         void delet()
         {
-            node *temp = f;
-            if (f == NULL)
+            node *temp = head;
+            if (head == NULL)
                 cout<<"No elements to delete\n"<<endl;
             else
             {
                 cout <<"The deleted elements is: "<<f->data<<endl;
-                f = f->next;
+                head = head->next;
                 delete temp;
                 cout<<"Deletion successfull"<<endl;
             }
@@ -42,8 +42,8 @@ class list
 
         void display()
         {
-            node *temp = f;
-            if (f == NULL)
+            node *temp = head;
+            if (head == NULL)
                 cout<<"List is empty"<<endl;
             else{
                 cout<<"Elements in the list are: ";
@@ -58,7 +58,7 @@ class list
 
 int main()
 {
-    int num, ch;
+    int ch;
     list ob;
     while (1){
         cout<<endl<<"Select the Operation"<<endl;
