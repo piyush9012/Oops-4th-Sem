@@ -4,7 +4,7 @@ using namespace std;
 
 struct nod
 {
-    int info;
+    int data;
     struct nod *next;
 };
 
@@ -18,10 +18,11 @@ class list
         }
         void ins(int num){
             node *p = new node;
-            p->info = num;
+            p->data = num;
             p->next = f;
             f = p;
         }
+
         void del(){
             node *temp = f;
             if (f == NULL)
@@ -34,6 +35,7 @@ class list
             }
             return;
         }
+
         void disp(){
             node *temp = f;
             if (f == NULL)
@@ -41,7 +43,7 @@ class list
             else{
                 cout<<"Elements in the list are: ";
                 while (temp != NULL){
-                    cout<<" "<<temp->info;
+                    cout<<" "<<temp->data;
                     temp = temp->next;
                 }
                 cout<<endl<<endl;
